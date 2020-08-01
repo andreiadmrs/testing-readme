@@ -1,8 +1,8 @@
+# GIT
+
 <h1 align="center">
   <img alt="Ícone do projeto" title="Git" src=".github/q7uy4yxekcljpr70p2xk.png" width="100%" />
 </h1>
-
-# GIT
 
 Guia prático para iniciantes.
 
