@@ -30,48 +30,48 @@ https://git-scm.com/doc
 
 # COMANDOS
 
-`git init` - Cria um repositório Git vazio ou reinicialize um existente.<br>
+- `git init` - Cria um repositório Git vazio ou reinicialize um existente.
 
-`git status` - Informa o estado das alterações do nosso projeto.<br>
+- `git status` - Informa o estado das alterações do nosso projeto.
 
-`git add [file]` - Adiciona ou atualiza mudanças para irem para o repositório.<br>
-`git add .` - Se quiser referenciar todos os arquivos use o " . ".<br>
+- `git add [file]` - Adiciona ou atualiza mudanças para irem para o repositório.
+- `git add .` - Você pode adicionar todos os arquivo usando o " . ".
 
-`git commit -m "message"` - Registra alterações no repositório.<br>
-`git commit -am "message"` - Atualiza o repositório e registra alterações no repositório ao mesmo tempo.<br>
+- `git commit -m "message"` - Registra alterações no repositório.
+- `git commit -am "message"` - Atualiza o repositório e registra alterações no repositório ao mesmo tempo.
 
-`git log` - Mostra os pontos na "linha do tempo" do repositório ( commit ).<br>
-`git log --oneline` - Mostra os pontos na "linha do tempo" de forma mais resumida.<br>
-`git log --abbrev-commit` - Ao vez de mostrar o hash com 40 caracteres, mostra apenas com 7 caracteres.<br>
-`git log --pretty=oneline` - Faz com que caiba tudo em uma linha.<br>
-`git log --graph` - Desenha uma representação gráfica dos commits no lado esquerdo da saída.<br>
+- `git log` - Mostra os pontos na "linha do tempo" do repositório ( commit ).
+- `git log --oneline` - Mostra os pontos na "linha do tempo" de forma mais resumida.
+- `git log --abbrev-commit` - Ao vez de mostrar o hash com 40 caracteres, mostra apenas com 7 caracteres.
+- `git log --pretty=oneline` - Faz com que caiba tudo em uma linha.
+- `git log --graph` - Desenha uma representação gráfica dos commits no lado esquerdo da saída.
 
-`git diff` - Mostra o que foi alterado em um arquivo, de vermelho o que foi excluído de verde o que foi adicionando.
-Use o "git diff" antes de dar o "git add".<br>
+- `git diff` - Mostra o que foi alterado em um arquivo, de vermelho o que foi excluído de verde o que foi adicionando.
+Use o "git diff" antes de dar o "git add".
 
-`git show` - Apresenta o último ponto na "história" do nosso projeto.<br>
-`git show [hash]` - Apresenta determinado ponto na "história" do nosso projeto.<br>
+- `git show` - Apresenta o último ponto na "história" do nosso projeto.
+- `git show [hash]` - Apresenta determinado ponto na "história" do nosso projeto.
 
-`git branch` - Lista, cria ou exclui ramificações.<br>
+- `git branch` - Lista, cria ou exclui ramificações.
 
-`git checkout [hash]` - Alterna ramificações ou restaura arquivos da árvore de trabalho.<br>
-`git checkout [arquivo_modificado]` - Descarta as mudanças feitas no arquivo. Use antes de dar o "git add".<br>
-`git checkout -b [minha-feature]` - Cria uma nova ramificação no nosso projeto.<br>
-`git checkout master` - Vai para a ramificação master.<br>
-`git checkout [minha_ramificação]` - Vai para a ramificação criada pelo desenvolvedor.<br>
+- `git checkout [hash]` - Alterna ramificações ou restaura arquivos da árvore de trabalho.
+- `git checkout [arquivo_modificado]` - Descarta as mudanças feitas no arquivo. Use antes de dar o "git add".
+- `git checkout -b [minha-feature]` - Cria uma nova ramificação no nosso projeto.
+- `git checkout master` - Vai para a ramificação master.
+- `git checkout [minha_ramificação]` - Vai para a ramificação criada pelo desenvolvedor.
 
-`git reset HEAD` - Remove um arquivo adicionado pelo "git add". Usar depois do "git add" e antes do "git commit".<br>
-`git reset --hard [hash]` - Remove um commit.<br>
+- `git reset HEAD` - Remove um arquivo adicionado pelo "git add". Usar depois do "git add" e antes do "git commit".
+- `git reset --hard [hash]` - Remove um commit.
 
-`git merge [minha_ramificação]` - Faz a fusão de uma ramificação x com a ramificação master. Para fazer a fusão você tem que estar na ramificação master.<br>
+- `git merge [minha_ramificação]` - Faz a fusão de uma ramificação x com a ramificação master. Para fazer a fusão você tem que estar na ramificação master.
 
-`git remote` - Verifica se existe um repositório remoto.<br>
+- `git remote` - Verifica se existe um repositório remoto.
 
-`git push` - Envia alterações locais para o repositório remoto.<br>
+- `git push` - Envia alterações locais para o repositório remoto.
 
-`git clone` - clonar um projeto / repositório.<br>
+- `git clone` - clonar um projeto / repositório.
 
-`git pull` - Puxa do repositório remoto.<br>
+- `git pull` - Puxa do repositório remoto.
 
 Exemplo de um hash:
   - a96c4c3
@@ -80,6 +80,92 @@ Exemplo de um hash:
 O que é uma ramificação?
 
 > As ramificações do Git são um indicador efetivo de um instantâneo de suas mudanças. Quando você quiser adicionar um novo recurso ou corrigir um bug—não importa o tamanho, grande ou pequeno—basta criar uma nova ramificação para encapsular as mudanças. Isso faz com que seja mais difícil um código instável ser mesclado com a base de código principal e dá a chance de você limpar seu histórico futuro antes de fazer a mesclagem na ramificação principal.  
+
+
+# Guia para mensagens de commits
+
+## Formato da mensagem
+
+Cada mensagem de commit consiste em um **cabeçalho**, um **corpo** e um **rodapé**. 
+
+## Cabeçalho
+
+Tem um formato pré-definido, que inclui um **tipo** e um **título**:
+
+```
+<tipo>(<escopo opcional>): <título>
+
+<corpo opcional>
+
+<rodapé opcional>
+
+Exemplos:
+fix(integracao-erp): xxxxxxx
+improve(app-toolbox): xxxxxxx
+docs: Instruções de iniciar projeto com docker
+```
+
+O **cabeçalho** é obrigatório.
+
+Qualquer linha da mensagem do commit não pode ter mais de 100 caracteres! Assim fica mais fácil para ler no GitHub, Gitlab e outras ferramentas de git.
+
+### Tipo
+
+Deve ser um dos seguintes:
+
+* **build**: Alterações que afetam o sistema de build ou dependências externas.
+* **static**: Alterações no conteúdo de arquivos estáticos (dados .json, imagens, etc).
+* **ci**: Alterações em nossos arquivos e scripts de configuração de CI.
+* **cd**: Alterações em nossos arquivos e scripts de configuração para CD.
+* **docs**: Aomente alterações na documentação.
+* **feat**: Um novo recurso.
+* **fix**: Uma correção de bug da aplicação.
+* **perf**: Uma alteração de código que melhora o desempenho.
+* **refactor**: Uma alteração de código que não corrige um bug nem adiciona um recurso.
+* **improve**: Alguma alteração de código que melhore o comportamento de um recurso.
+* **style**: Alterações que não afetam o significado do código (espaço em branco, formatação, ponto e vírgula, etc).
+* **test**: Adicionando testes ausentes ou corrigindo testes existentes.
+* **revert**: Reverter para um commit anterior.
+
+### Título
+
+O título contém uma descrição sucinta da mudança:
+
+* use o imperativo, tempo presente: "mudança" não "mudou" nem "muda"
+* não capitalize a primeira letra
+* sem ponto (.) no final
+
+## Corpo
+
+Um corpo de mensagem de commit mais longo PODE ser fornecido após o título, fornecendo informações contextuais adicionais sobre as alterações no código. 
+
+Configure a mensagem com um wrap de 80 caracteres
+
+Use para explicar "o que" e "porque" foi realizado essa modificação, ao invez de "como".
+
+O corpo DEVE começar depois de uma linha em branco após a descrição.
+
+## Rodapé
+
+Um rodapé PODE ser fornecido depois de uma linha em branco após o corpo. 
+
+Caso exista um ticket no jira, criar um referência assim: `issue TP-666` ou `closes issue TP-666`
+
+## Reverter um commit
+Se o commit reverte um commit anterior, ele deve começar por `revert:`, seguido pelo cabeçalho do commit revertido. 
+
+No corpo, ele deve dizer: `Isso reverte o commit <hash> .`, onde o hash é o SHA do commit sendo revertido.
+
+## Porquê?
+
+* Criação automatizada de CHANGELOGs
+* Determinar automaticamente um aumento de versionamento semântico (com base nos tipos de commits)
+* Comunicar a natureza das mudanças para colegas de equipe, o público e outras partes interessadas de forma padronizada
+* Disparar processos de build e deploy
+* Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de commits mais estruturado e com melhor rastreabilidade
+
+#### Referência: [Conventional Commits](https://www.conventionalcommits.org/pt-br/)
+
 
 # ALIAS
 Você pode criar alias para os comandos do git, basta ir no arquivo ".gitconfig" e definir seus alias.
