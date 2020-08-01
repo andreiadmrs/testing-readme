@@ -71,7 +71,7 @@ Use o "git diff" antes de dar o "git add".<br>
 
 `git push` - Envia alterações locais para o repositório remoto.<br>
 
-`git clone` - clonar um projeto / repositório.<br>
+`git clone [link_repositório]` - clonar um projeto / repositório.<br>
 
 `git pull` - Puxa do repositório remoto.<br>
 
@@ -82,7 +82,6 @@ Exemplo de um hash:
 O que é uma ramificação?
 
 > As ramificações do Git são um indicador efetivo de um instantâneo de suas mudanças. Quando você quiser adicionar um novo recurso ou corrigir um bug—não importa o tamanho, grande ou pequeno—basta criar uma nova ramificação para encapsular as mudanças. Isso faz com que seja mais difícil um código instável ser mesclado com a base de código principal e dá a chance de você limpar seu histórico futuro antes de fazer a mesclagem na ramificação principal.  
-
 
 # Padronização de commits
 
@@ -165,7 +164,6 @@ No corpo, ele deve dizer: `Isso reverte o commit <hash> .`, onde o hash é o SHA
 * Comunicar a natureza das mudanças para colegas de equipe, o público e outras partes interessadas de forma padronizada
 * Disparar processos de build e deploy;
 * Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de commits mais estruturado e com melhor rastreabilidade.
-
 
 # ALIAS
 Você pode criar alias para os comandos do git, basta ir no arquivo ".gitconfig" e definir seus alias.
