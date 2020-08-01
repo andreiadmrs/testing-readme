@@ -41,11 +41,21 @@ https://git-scm.com/doc
 
 Exemplo: 
 ```console
-git add server.js
+roger@AB4NT5S:~/scripts$ git init
+roger@AB4NT5S:~/scripts$ git status
+roger@AB4NT5S:~/scripts$ git add server.js
 ```
 
 `git commit -m "message"` - Registra alterações no repositório.<br>
 `git commit -am "message"` - Atualiza o repositório e registra alterações no repositório ao mesmo tempo.<br>
+
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git init
+roger@AB4NT5S:~/scripts$ git status
+roger@AB4NT5S:~/scripts$ git add server.js
+roger@AB4NT5S:~/scripts$ git commit -m "added server"
+```
 
 `git log` - Mostra os pontos na "linha do tempo" do repositório ( commit ).<br>
 `git log --oneline` - Mostra os pontos na "linha do tempo" de forma mais resumida.<br>
@@ -53,13 +63,37 @@ git add server.js
 `git log --pretty=oneline` - Faz com que caiba tudo em uma linha.<br>
 `git log --graph` - Desenha uma representação gráfica dos commits no lado esquerdo da saída.<br>
 
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git log --oneline
+```
+
 `git diff` - Mostra o que foi alterado em um arquivo, de vermelho o que foi excluído de verde o que foi adicionando.
 Use o "git diff" antes de dar o "git add".<br>
+
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ vim server.js
+roger@AB4NT5S:~/scripts$ git diff
+roger@AB4NT5S:~/scripts$ git add server.js
+roger@AB4NT5S:~/scripts$ git commit -m "updated server"
+```
 
 `git show` - Apresenta o último ponto na "história" do nosso projeto.<br>
 `git show [hash]` - Apresenta determinado ponto na "história" do nosso projeto.<br>
 
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git log
+roger@AB4NT5S:~/scripts$ git show a96c4c3936dbaa78be7254eb7b6b9b86fc46adc0
+```
+
 `git branch` - Lista, cria ou exclui ramificações.<br>
+
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git branch
+```
 
 `git checkout [hash]` - Alterna ramificações ou restaura arquivos da árvore de trabalho.<br>
 `git checkout [arquivo_modificado]` - Descarta as mudanças feitas no arquivo. Use antes de dar o "git add".<br>
@@ -67,18 +101,56 @@ Use o "git diff" antes de dar o "git add".<br>
 `git checkout master` - Vai para a ramificação master.<br>
 `git checkout [minha_ramificação]` - Vai para a ramificação criada pelo desenvolvedor.<br>
 
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git checkout -b feature/routes
+roger@AB4NT5S:~/scripts$ git checkout feature/routes
+```
+
 `git reset HEAD` - Remove um arquivo adicionado pelo "git add". Usar depois do "git add" e antes do "git commit".<br>
 `git reset --hard [hash]` - Remove um commit.<br>
 
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git log
+roger@AB4NT5S:~/scripts$ git reset --hard a96c4c3936dbaa78be7254eb7b6b9b86fc46adc0 
+```
+
 `git merge [minha_ramificação]` - Faz a fusão de uma ramificação x com a ramificação master. Para fazer a fusão você tem que estar na ramificação master.<br>
+
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git checkout master
+roger@AB4NT5S:~/scripts$ git merge feature/routes
+```
 
 `git remote` - Verifica se existe um repositório remoto.<br>
 
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git remote
+```
+
 `git push` - Envia alterações locais para o repositório remoto.<br>
 
-`git clone [link_repositório]` - clonar um projeto / repositório.<br>
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ push origin master -u
+```
+
+`git clone [link_repositório]` - clonar um projeto / repositório.<br> 
+
+Exemplo: 
+```console
+roger@AB4NT5S:~$ git clone https://github.com/Bora-Codar/Olimpo-dos-Devs---Backend.git
+```
 
 `git pull` - Puxa do repositório remoto.<br>
+
+Exemplo: 
+```console
+roger@AB4NT5S:~/scripts$ git pull
+```
 
 Exemplo de um hash:
   - a96c4c3
