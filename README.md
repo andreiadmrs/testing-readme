@@ -87,6 +87,7 @@ Você pode criar alias para os comandos do git, basta ir no arquivo ".gitconfig"
 
 Alias que eu gosto de usar:
 
+```
 [alias] <br>
   i = init <br>
   a = add <br>
@@ -104,3 +105,4 @@ Alias que eu gosto de usar:
   unstage = reset HEAD -- <br>
   undo = checkout -- <br>
   rollback = reset --soft HEAD~1 <br>
+ ```
