@@ -1,4 +1,8 @@
-# GIT E GITHUB
+<h1 align="center">
+  <img alt="Ícone do projeto" title="Git" src=".github/q7uy4yxekcljpr70p2xk.png" width="100%" />
+</h1>
+
+# GIT
 
 Guia prático para iniciantes.
 
@@ -196,3 +200,5 @@ Alias que eu gosto de usar:
 [Conventional Commits](https://www.conventionalcommits.org/pt-br/)<br>
 [Guia para mensagens de commits](https://gist.github.com/ivanrosolen/b5fc4f281b427949d24e849d982b888b)<br>
 [youtube-git-guia-pratico-iniciante](https://github.com/Rocketseat/youtube-git-guia-pratico-iniciante)<br>
+
+<p align="center">Made with :blue_heart: By Bora Codar</p>
