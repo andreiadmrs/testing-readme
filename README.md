@@ -39,6 +39,11 @@ https://git-scm.com/doc
 `git add [file]` - Adiciona ou atualiza mudanças para irem para o repositório.<br>
 `git add .` - Você pode adicionar todos os arquivo usando o " . ".<br>
 
+Exemplo: 
+```console
+git add server.js
+```
+
 `git commit -m "message"` - Registra alterações no repositório.<br>
 `git commit -am "message"` - Atualiza o repositório e registra alterações no repositório ao mesmo tempo.<br>
 
