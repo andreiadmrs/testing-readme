@@ -167,6 +167,7 @@ No corpo, ele deve dizer: `Isso reverte o commit <hash> .`, onde o hash é o SHA
 
 # ALIAS
 Você pode criar alias para os comandos do git, basta ir no arquivo ".gitconfig" e definir seus alias.
+No uninx ( Linux e Mac ) o arquivo ".gitconfig" fica localizado em: /home/seuusuário/.gitconfig
 
 Alias que eu gosto de usar:
 
@@ -192,6 +193,6 @@ Alias que eu gosto de usar:
 
 # REFERÊNCIAS
 
-[Conventional Commits](https://www.conventionalcommits.org/pt-br/)
-[Guia para mensagens de commits](https://gist.github.com/ivanrosolen/b5fc4f281b427949d24e849d982b888b)
-[youtube-git-guia-pratico-iniciante](https://github.com/Rocketseat/youtube-git-guia-pratico-iniciante)
+[Conventional Commits](https://www.conventionalcommits.org/pt-br/)<br>
+[Guia para mensagens de commits](https://gist.github.com/ivanrosolen/b5fc4f281b427949d24e849d982b888b)<br>
+[youtube-git-guia-pratico-iniciante](https://github.com/Rocketseat/youtube-git-guia-pratico-iniciante)<br>
