@@ -135,15 +135,15 @@ Deve ser um dos seguintes:
 
 O título contém uma descrição sucinta da mudança:
 
-* use o imperativo, tempo presente: "mudança" não "mudou" nem "muda"
-* não capitalize a primeira letra
-* sem ponto (.) no final
+* use o imperativo, tempo presente: "mudança" não "mudou" nem "muda".
+* não capitalize a primeira letra.
+* sem ponto (.) no final.
 
 ## Corpo
 
 Um corpo de mensagem de commit mais longo PODE ser fornecido após o título, fornecendo informações contextuais adicionais sobre as alterações no código. 
 
-Configure a mensagem com um wrap de 80 caracteres
+Configure a mensagem com um wrap de 80 caracteres.
 
 Use para explicar "o que" e "porque" foi realizado essa modificação, ao invez de "como".
 
@@ -153,7 +153,7 @@ O corpo DEVE começar depois de uma linha em branco após a descrição.
 
 Um rodapé PODE ser fornecido depois de uma linha em branco após o corpo. 
 
-Caso exista um ticket no jira, criar um referência assim: `issue TP-666` ou `closes issue TP-666`
+Caso exista um ticket no jira, criar um referência assim: `issue TP-666` ou `closes issue TP-666`.
 
 ## Reverter um commit
 Se o commit reverte um commit anterior, ele deve começar por `revert:`, seguido pelo cabeçalho do commit revertido. 
@@ -162,11 +162,11 @@ No corpo, ele deve dizer: `Isso reverte o commit <hash> .`, onde o hash é o SHA
 
 ## Porquê?
 
-* Criação automatizada de CHANGELOGs
-* Determinar automaticamente um aumento de versionamento semântico (com base nos tipos de commits)
+* Criação automatizada de CHANGELOGs;
+* Determinar automaticamente um aumento de versionamento semântico (com base nos tipos de commits);
 * Comunicar a natureza das mudanças para colegas de equipe, o público e outras partes interessadas de forma padronizada
-* Disparar processos de build e deploy
-* Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de commits mais estruturado e com melhor rastreabilidade
+* Disparar processos de build e deploy;
+* Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de commits mais estruturado e com melhor rastreabilidade.
 
 
 # ALIAS
