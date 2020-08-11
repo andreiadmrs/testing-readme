@@ -21,3 +21,9 @@
 #### Exemplo de uso
 
 `kyara cce C:\Users\Roger\Downloads speed-audio` <br>
+
+### Para saber o diretório atual basta digitar:
+`kyara dir`
+
+### Você pode obter algumas informações do seu sistema operacional digitando:
+`kyara os`
