@@ -1,11 +1,11 @@
 # Seletores CSS
 
-- TAG - O seletor de tag é o mais simples de todos, basta informar o nome da tag por exemplo <p>, e todas as tags <p> existentes no documento receberão a formatação indicada.
+- TAG - O seletor de tag é o mais simples de todos, basta informar o nome da tag por exemplo p, e todas as tags p existentes no documento receberão a formatação indicada.
 
 - ID - O seletor para id é mais específico do que o de tags, formata somente a tag que possui o id especificado, para indicar
 que o seletor será para um id basta anteceder o nome do id com o caractere hash “#”.
 
-- CLASS -Este selector formata todos os elementos que usam a classe indicada, desta maneira podemos ter várias tags <p>
+- CLASS -Este selector formata todos os elementos que usam a classe indicada, desta maneira podemos ter várias tags p
 
 por exemplo, somente receberão a formatação aquelas que tiverem o atributo class com o nome da classe
 configurada, para identificar este seletor, basta usar um ponto “.” antes do nome da classe.
