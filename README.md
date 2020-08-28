@@ -13,6 +13,8 @@ configurada, para identificar este seletor, basta usar um ponto “.” antes do
 Podemos indicar mais de um seletor para receber um conjunto de formatações CSS, basta indicar estes seletores 
 separados por vírgulas
 
+```
+
 Seletor CSS                 |Exemplo                      |Descrição
 ----------------------------|-----------------------------|-----------
 .classe                     |.intro                       |Seleciona todos os elementos que usam a classe intro / class="intro"
@@ -66,4 +68,5 @@ elemento1~elemento2         |p ~ ul                       |Seleciona todos os el
 ::selection                 |::selection                  |Selecciona a parte de um elemento que é selecionado pelo usuário
 :target                     |#noticias:target             |Seleciona o elemento #noticias atual (clicou em um URL que contém esse nome de âncora)
 :valid                      |input:valid                  |Seleciona todos os elementos input
+```
 
