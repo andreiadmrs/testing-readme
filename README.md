@@ -9,7 +9,7 @@ background-size: VALOR VALOR;  | largura e altura, permite controlar a dimensão
 - background-repeat - Controla a repetição de uma imagem:
 
 Propiedade                    | Descrição
------------------------------ + --------------------------------------
+----------------------------- |--------------------------------------
 background-repeat: repeat;    | Repete a imagem (padrão)
 background-repeat: no-repeat; | Não repete a imagem
 background-repeat: repeat-x;  | Repete a imagem apenas na horizontal
@@ -18,7 +18,7 @@ background-repeat: repeat-y;  | Repete a imagem apenas na vertical<br>
 - background-position - Controla a posição da imagem:
 
 Propiedade                          | Valor
------------------------------------ + -------------------------------------
+------------------------------------|-------------------------------------
 background-position: EIXOX EIXOY;   | Variante
 background-position: left top;      | Esquerda em cima
 background-position: left center;   | Esquerda no centro
