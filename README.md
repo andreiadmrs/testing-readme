@@ -1,7 +1,7 @@
 # background PT 1
 
 Propiedade                     | Descrição
------------------------------- |--------------------------------------
+------------------------------ + --------------------------------------
 background-color: cor;         | Especifica a cor de fundo de um elemento.
 background-image: url(imagem); | Especifica uma imagem a ser usada como plano de fundo de um elemento.
 background-size: VALOR VALOR;  | largura e altura, permite controlar a dimensão da imagem.
@@ -9,7 +9,7 @@ background-size: VALOR VALOR;  | largura e altura, permite controlar a dimensão
 - background-repeat - Controla a repetição de uma imagem:
 
 Propiedade                    | Descrição
-------------------------------|--------------------------------------
+----------------------------- + --------------------------------------
 background-repeat: repeat;    | Repete a imagem (padrão)
 background-repeat: no-repeat; | Não repete a imagem
 background-repeat: repeat-x;  | Repete a imagem apenas na horizontal
@@ -17,10 +17,9 @@ background-repeat: repeat-y;  | Repete a imagem apenas na vertical<br>
 
 - background-position - Controla a posição da imagem:
 
-- background-position: EIXOX EIXOY;
-
 Propiedade                          | Valor
-------------------------------------|--------------------------------------
+----------------------------------- + -------------------------------------
+background-position: EIXOX EIXOY;   | Variante
 background-position: left top;      | Esquerda em cima
 background-position: left center;   | Esquerda no centro
 background-position: left bottom;   | Esquerda em baixo
