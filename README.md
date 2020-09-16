@@ -1,6 +1,6 @@
 ## Visualização de arquivos
 
-- `more [arquivo]` - Mostra o conteúdo de um arquivo em partes.
+- **`more [arquivo]`** - Mostra o conteúdo de um arquivo em partes.
 - `less [arquivo]` - Exibi o conteúdo de um arquivo páginado.
 - `tac [arquivo]` - Exibi o conteúdo de um arquivo de trás pra frente (da última linha pra primeira).
 - `cat [opção] [arquivo]`
