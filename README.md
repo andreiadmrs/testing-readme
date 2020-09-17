@@ -2,7 +2,10 @@
 
 Para poder padronizar seus commits, você vai precisar de duas ferramentas, o [commitlint](https://github.com/conventional-changelog/commitlint) e o [commitizen](https://github.com/commitizen/cz-cli), você pode instalar essas dependências usando o npm ou o yarn.
 
-Você pode ler a documentação no repositório ofical das ferramentas ou assistir um vídeo da rocketseat sobre padronização de commits usando essas ferramentas, [Padronizando mensagens de commit do Git | Code/Drops #12](https://www.youtube.com/watch?v=erInHkjxkL8).
+Caso você não queira ler a documentação, recomendo dois vídeos sobre como usar as ferramentas para padronização:
+
+- Rocketseat - [Padronizando mensagens de commit do Git | Code/Drops #12](https://www.youtube.com/watch?v=erInHkjxkL8).
+- Angelo Luz - [Git - Padronização de commits - gitmoji, commitlint e commitizen](https://www.youtube.com/watch?v=49a9M17ZikI&t=975s).
 
 - [X] **Formato da mensagem**: Cada mensagem de commit consiste em um **cabeçalho**, um **corpo** e um **rodapé**. 
 
