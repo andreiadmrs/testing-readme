@@ -1,44 +1,65 @@
-## Cmandos
+## Padronização de commits
 
-- **`git init`** - Cria um repositório Git vazio ou reinicialize um existente. <br>
+Para poder padronizar seus commits, você vai precisar de duas ferramentas, o [commitlint](https://github.com/conventional-changelog/commitlint) e o [commitizen](https://github.com/commitizen/cz-cli), você pode instalar essas dependências usando o npm ou o yarn.
 
-- **`git status`** - Informa o estado das alterações do nosso projeto. <br>
+Você pode ler a documentação no repositório ofical das ferramentas ou assistir um vídeo da rocketseat sobre padronização de commits usando essas ferramentas, [Padronizando mensagens de commit do Git | Code/Drops #12](https://www.youtube.com/watch?v=erInHkjxkL8).
 
-- **`git add [file]`** - Adiciona ou atualiza mudanças para irem para o repositório.
-- **`git add .`** - Você pode adicionar todos os arquivo usando o " . ". <br>
+- [X] **Formato da mensagem**: Cada mensagem de commit consiste em um **cabeçalho**, um **corpo** e um **rodapé**. 
 
-- **`git commit -m "message"`** - Registra alterações no repositório.
-- **`git commit -am "message"`** - Atualiza o repositório e registra alterações no repositório ao mesmo tempo. <br>
+- [X] **Cabeçalho**: Tem um formato pré-definido, que inclui um **tipo** e um **título**:
 
-- **`git log`** - Mostra os pontos na "linha do tempo" do repositório ( commit ).
-- **`git log --oneline`** - Mostra os pontos na "linha do tempo" de forma mais resumida.
-- **`git log --abbrev-commit`** - Ao vez de mostrar o hash com 40 caracteres, mostra apenas com 7 caracteres.
-- **`git log --pretty=oneline`** - Faz com que caiba tudo em uma linha.
-- **`git log --graph`** - Desenha uma representação gráfica dos commits no lado esquerdo da saída. <br>
+```
+<tipo>(<escopo opcional>): <título>
 
-- **`git diff`** - Mostra o que foi alterado em um arquivo, de vermelho o que foi excluído de verde o que foi adicionando.
-Use o "git diff" antes de dar o "git add". <br>
+<corpo opcional>
 
-- **`git show`** - Apresenta o último ponto na "história" do nosso projeto.
-- **`git show [hash]`** - Apresenta determinado ponto na "história" do nosso projeto. <br>
+<rodapé opcional>
 
-- **`git branch`** - Lista, cria ou exclui ramificações. <br>
+Exemplos:
+fix(integracao-erp): xxxxxxx
+improve(app-toolbox): xxxxxxx
+docs: Instruções de iniciar projeto com docker
+```
 
-- **`git checkout [hash]`** - Alterna ramificações ou restaura arquivos da árvore de trabalho.
-- **`git checkout [arquivo_modificado]`** - Descarta as mudanças feitas no arquivo. Use antes de dar o "git add".
-- **`git checkout -b [minha-feature]`** - Cria uma nova ramificação no nosso projeto.
-- **`git checkout master`** - Vai para a ramificação master.
-- **`git checkout [minha_ramificação]`** - Vai para a ramificação criada pelo desenvolvedor. <br>
+- [X] O **cabeçalho** é obrigatório.
 
-- **`git reset HEAD`** - Remove um arquivo adicionado pelo "git add". Usar depois do "git add" e antes do "git commit".
-- **`git reset --hard [hash]`** - Remove um commit. <br>
+Qualquer linha da mensagem do commit não pode ter mais de 100 caracteres! Assim fica mais fácil para ler no GitHub, Gitlab e outras ferramentas de git.
 
-- **`git merge [minha_ramificação]`** - Faz a fusão de uma ramificação x com a ramificação master. Para fazer a fusão você tem que estar na ramificação master. <br>
+- [X] **Título**: O título contém uma descrição sucinta da mudança:
 
-- **`git remote`** - Verifica se existe um repositório remoto. <br>
+* use o imperativo, tempo presente: "mudança" não "mudou" nem "muda".
+* não capitalize a primeira letra.
+* sem ponto (.) no final.
 
-- **`git push`** - Envia alterações locais para o repositório remoto. <br>
+- [X] **Corpo**: Um corpo de mensagem de commit mais longo PODE ser fornecido após o título, fornecendo informações contextuais adicionais sobre as alterações no código. Configure a mensagem com um wrap de 80 caracteres. Use para explicar "o que" e "porque" foi realizado essa modificação, ao invez de "como". O corpo DEVE começar depois de uma linha em branco após a descrição.
 
-- **`git clone [link_repositório]`** - Clonar um projeto / repositório.  <br>
+- [X] **Rodapé**: Um rodapé PODE ser fornecido depois de uma linha em branco após o corpo. Caso exista um ticket no jira, criar um referência assim: `issue TP-666` ou `closes issue TP-666`.
 
-- **`git pull`** - Puxa do repositório remoto.
+- [X] **Reverter um commit**: Se o commit reverte um commit anterior, ele deve começar por `revert:`, seguido pelo cabeçalho do commit revertido. No corpo, ele deve dizer: `Isso reverte o commit <hash> .`, onde o hash é o SHA do commit sendo revertido.
+
+## Tipos
+
+Deve ser um dos seguintes:
+
+* **build**: Alterações que afetam o sistema de build ou dependências externas.
+* **static**: Alterações no conteúdo de arquivos estáticos (dados .json, imagens, etc).
+* **ci**: Alterações em nossos arquivos e scripts de configuração de CI.
+* **cd**: Alterações em nossos arquivos e scripts de configuração para CD.
+* **docs**: Somente alterações na documentação.
+* **feat**: Um novo recurso.
+* **fix**: Uma correção de bug da aplicação.
+* **perf**: Uma alteração de código que melhora o desempenho.
+* **refactor**: Uma alteração de código que não corrige um bug nem adiciona um recurso.
+* **improve**: Alguma alteração de código que melhore o comportamento de um recurso.
+* **style**: Alterações que não afetam o significado do código (espaço em branco, formatação, ponto e vírgula, etc).
+* **test**: Adicionando testes ausentes ou corrigindo testes existentes.
+* **revert**: Reverter para um commit anterior.
+
+
+## Por quê?
+
+* Criação automatizada de CHANGELOGs;
+* Determinar automaticamente um aumento de versionamento semântico (com base nos tipos de commits);
+* Comunicar a natureza das mudanças para colegas de equipe, o público e outras partes interessadas de forma padronizada
+* Disparar processos de build e deploy;
+* Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de commits mais estruturado e com melhor rastreabilidade.
