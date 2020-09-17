@@ -5,7 +5,7 @@ Para poder padronizar seus commits, você vai precisar de duas ferramentas, o [c
 Caso você não queira ler a documentação, recomendo dois vídeos sobre como usar as ferramentas para padronização:
 
 - Rocketseat - [Padronizando mensagens de commit do Git | Code/Drops #12](https://www.youtube.com/watch?v=erInHkjxkL8).
-- Angelo Luz - [Git - Padronização de commits - gitmoji, commitlint e commitizen](https://www.youtube.com/watch?v=49a9M17ZikI&t=975s).
+- Angelo Luz - [Git - Padronização de commits - gitmoji, commitlint e commitizen](https://www.youtube.com/watch?v=49a9M17ZikI&t=975s).<br><br>
 
 - [X] **Formato da mensagem**: Cada mensagem de commit consiste em um **cabeçalho**, um **corpo** e um **rodapé**. 
 
