@@ -1,132 +1,62 @@
-# Strings P1
+# Strings P2 - Métodos
 
-- [X] **`match()`** - O método match procura um texto especificado em uma string, o método pode retornar o valor procurado como único valor de retorno, um array com todas as ocorrências encontradas ou "null" caso nada seja encontrado.
-
-```js
-suaString.match( procura )
-```
-
-### Alguns exemplos:
+- [X] **`search()`** - O método serach() procura pela ocorrência e retorna sua posição dentro da string, a posição é em relação ao primeiro caractere da ocorrência, veja o código:
 
 ```js
-const texto = 'Curso de Javascript'
-const resultado = texto.match( 'Javascript' )
+const texto = 'Canal Fessor Bruno - Curso de Javascript - CFB'
+const resultado = texto.search( /Curso/ )
 console.log( resultado )
 ```
 
-No código acima criamos uma variável com um texto, em seguida criamos outra variável que vai receber o resultado da busca do método match que está procurando o texto "Javascript". O resultado deste código é a impressão do texto "Javascript" na tela, um detalhe importante é que se for pesquisado o texto "Javascript", com "J" minúsculo o resultado será "null", pois, o padrão é a pesquisa exata.
+O método "search" irá procurar pela primeira ocorrência da palavra "Curso" com "C" maiúsculo.
 
-Quando pesquisamos usando aspas, independentemente do número de ocorrências encontradas a quantidade
-informada será sempre 1, ou seja, se tivéssemos 5 palavras "Canal", seria retornado a palavra "Canal" e somente
-uma ocorrência.
+**Observação**: Os modificadores que aprendemos anteriormente também podem ser usados no método "search" da mesma
+maneira que no método "match".
+
+- [X] **`replace()`** - Este método substitui uma string por outra, simples assim, ele pesquisa a string informada, como no método "match" e a substitui por outra string nas aspas informada como segundo parâmetro, veja o código de exemplo a
+seguir que troca o texto "Javascript" pelo texto "React":
 
 ```js
-const texto = 'Canal Canal Canal Canal Canal'
-const resultado = texto.match( 'Canal' )
+const texto = 'Javascript - Node'
+const resultado = texto.replace( /Javascript/i , 'React' )
 console.log( resultado )
-console.log( resultado.length )
 ```
 
-Como melhorar isto e passar a armazenar os resultados em um array? É simples, basta mudar a forma de passar o
-parâmetro e usar um modificador, veja:
+Note pelo código que o texto "Javascript - Node" teve a string "Javascript" trocada e foi
+impresso o texto "Javascript - React".
+
+- [X] **`charAt()`** - Retorna o caractere na posição indicada como parâmetro do método.
 
 ```js
-const texto = 'Canal Canal Canal Canal Canal'
-const resultado = texto.match( /Canal/g )
-console.log( resultado[0] )
-console.log( resultado.length )
-```
-
-Trocamos aspas por barra e usamos o modificador "g", desta maneira as ocorrências são armazenadas uma em cada
-posição do vetor.
-
-O modificador "g" diz ao método para encontrar todas as ocorrências da palavra e não parar na primeira
-encontrada, podemos ainda usar os modificadores "i" e "m", veja a tabela a seguir:
-
-Modificador   | Descrição
---------------|---------------------------------------------------------------------------------------
-i             | Busca sem case-sensitive, ou seja, não diferencia letras maiúsculas de minúsculas
-g             | Diz ao método para encontrar todas as ocorrências da palavra e não parar na primeira encontrada, cada ocorrência é armazenada em uma posição do array
-m             | Pesquisa normal sem armazenar em forma de array
-
-Agora sabemos como pesquisar ignorando caracteres maiúsculos de minúsculos:
-
-```js
-const texto = 'Canal cAnal caNal canAl canaL canal CANAL'
-const resultado = texto.match(/canal/gi)
-console.log(resultado[0] + '<br>')
-console.log(resultado.length)
-```
-
-Note que agora usamos dois modificadores "g" e "i".
-
-Vamos a mais uma pequena alteração em nosso código tirando o índice do array:
-
-```js
-const texto = 'Canal cAnal caNal canAl canaL canal CANAL'
-const resultado = texto.match( /canal/gi )
+const texto = 'Javascript'
+const resultado = texto.charAt( 6 )
 console.log( resultado )
-console.log( resultado.length )
 ```
 
-Agora são impressos todas as ocorrências de uma só vez
+No código acima o método retorna a letra "r", pois é o caractere que está na posição 6.
 
-Quer procurar por letras? O processo é o mesmo, veja a alteração do código onde procuramos por ocorrências da
-letra "o" e imprimimos a quantidade de letras "o" encontradas:
+- [X] **`charCodeAt()`** - Retorna o código do caractere na posição indicada como parâmetro do método.
 
 ```js
-const texto = 'Curso de Javascript'
-const resultado = texto.match( /o/gi )
-console.log( resultado.length )
+const texto = 'Javascript'
+const resultado = texto.charCodeAt( 6 )
+console.log( resultado )
 ```
 
-Ainda podemos melhorar nossa pesquisa usando colchetes, por exemplo, se for preciso pesquisar todas as letras "a"
-e "o"? É simples:
+No código acima o método retorna o código a letra "r" que é o código 114, pois é o caractere que está na posição 6.
+
+- [X] **`concat()`** - Concatena, funde, une, junta uma string em outra, no código a seguir juntamos as strings textOne e textTwo.
 
 ```js
-const texto = 'Curso de Javascript'
-const resultado = texto.match( /[oa]/gi )
-console.log( resultado.length )
+const textOne = 'React - '
+const textTwo = 'Node'
+const resultado = textOne.concat( textTwo )
+console.log( resultado )
 ```
 
-O resultado sete é relativo ao número de letras "a" somado ao número de letras "o".
-
-Confira a seguir uma tabela com outras opções de pesquisa usando colchetes:
-
-Expressão   | Descrição
-------------|---------------------------------------------------------------------------------------
-[abcd]      | Pesquisa pelos caracteres "a", "b", "c" e "d"
-[^ab]       | Pesquisa por todos os caracteres, menos os "a" e "b".
-[a-f]       | Pesquisa pelos caracteres de "a" até "f"
-[^a-f]      | Pesquisa por todos os caracteres, menos os de "a" até "f"
-[a|f]       | Pesquisa pelos caracteres "a" e "f", semelhante à primeira opção.
-
-Outras opções que podemos para implementar nossa pesquisa são os "metacaracteres", por exemplo, se
-precisarmos saber quantos espaços existem na string, basta usar o "metacaractere" espaço, veja o exemplo a seguir:
+- [X] **`fromCharCode()`** - Converte um código informado no caractere correspondente, o script a seguir converte o código 66 no caractere correspondente que é o "B":
 
 ```js
-const texto = 'Curso de Javascript'
-const resultado = texto.match( /\s/g )
-console.log( resultado.length )
+const resultado = String.fromCharCode( 66 )
+console.log( resultado )
 ```
-
-Assim obtemos a contagem dos espaços.
-
-Existem vários "metacaracteres" que podemos usar, confira a tabela a seguir:
-
-Metacaratere   | Descrição
----------------|-----------------------------------------------------------------------------------
-\w             | Pesquisa somente por letras e numerais, ignorando espaços, traços, etc.
-\W             | Pesquisa por caracteres diferentes de números e letras
-\d             | Pesquisa por numerais
-\D             | Pesquisa por todos os caracteres que não são numerais
-\s             | Pesquisa pelos espaços
-\S             | Pesquisa por todos os caracteres, menos os espaços
-\b             | Pesquisa por ocorrência que iniciem ou terminem com uma letra ou número, cada ocorrência que iniciar e terminar com um número ou letra conta como 2
-\B             | Pesquisa por ocorrência que NÃO iniciem ou terminem com uma letra ou número
-\O             | Procura por caracteres nulos.
-\n             | Procura por quebra de linha.
-\r             | Procura por caractere de "retorno de carro" ENTER.
-\t             | Procura por caractere de tabulação TAB
-\v             | Procura por caractere de tabulação vertical
-s+             | Procura por palavras que contenham uma ou mais letras "s"
