@@ -1,62 +1,115 @@
-# Strings P2 - Métodos
+# Strings P3 - Método
 
-- [X] **`search()`** - O método serach() procura pela ocorrência e retorna sua posição dentro da string, a posição é em relação ao primeiro caractere da ocorrência, veja o código:
+- [X] **`indexOf()`** - Retorna a posição do primeiro caractere especificado a ser encontrado, no exemplo procuramos a posição da letra "d" e será retornada a posição 5:
 
 ```js
-const texto = 'Canal Fessor Bruno - Curso de Javascript - CFB'
-const resultado = texto.search( /Curso/ )
+const string = 'Aprendendo Javascript'
+const resultado = string.indexOf( 'd' )
 console.log( resultado )
 ```
 
-O método "search" irá procurar pela primeira ocorrência da palavra "Curso" com "C" maiúsculo.
-
-**Observação**: Os modificadores que aprendemos anteriormente também podem ser usados no método "search" da mesma
-maneira que no método "match".
-
-- [X] **`replace()`** - Este método substitui uma string por outra, simples assim, ele pesquisa a string informada, como no método "match" e a substitui por outra string nas aspas informada como segundo parâmetro, veja o código de exemplo a
-seguir que troca o texto "Javascript" pelo texto "React":
+- [X] **`lastIndexOf()`** - Retorna a posição do último caractere especificado a ser encontrado, no exemplo procuramos a posição da última letra "a" e será retornada a posição 14:
 
 ```js
-const texto = 'Javascript - Node'
-const resultado = texto.replace( /Javascript/i , 'React' )
+const string = 'Aprendendo Javascript'
+const resultado = string.lastIndexOf( 'a' )
 console.log( resultado )
 ```
 
-Note pelo código que o texto "Javascript - Node" teve a string "Javascript" trocada e foi
-impresso o texto "Javascript - React".
+O resultado deste script é o valor 14 que é a posição da última letra "a" já que a primeira está na posição "12".
 
-- [X] **`charAt()`** - Retorna o caractere na posição indicada como parâmetro do método.
+- [X] **`localeCompare()`** - Este método compara duas strings, se forem iguais retorna "0" zero, se a primeira for menor que a segunda retorna "-1" e se for maior, retorna "1", então qualquer valor diferente de zero significa que as strings não são iguais. Em nosso código de exemplo o valor impresso será "0" zero, pois, as strings são idênticas.
 
 ```js
-const texto = 'Javascript'
-const resultado = texto.charAt( 6 )
+const string1 = 'Javascript'
+const string2 = 'Javascript'
+const resultado = string1.localeCompare( string2 )
 console.log( resultado )
 ```
 
-No código acima o método retorna a letra "r", pois é o caractere que está na posição 6.
-
-- [X] **`charCodeAt()`** - Retorna o código do caractere na posição indicada como parâmetro do método.
+- [X] **`slice()`** - O método slice() corta uma string de um ponto A até um ponto B especificados e retorna o valor recortado, nosso script a seguir retorna o texto "Javascript":
 
 ```js
-const texto = 'Javascript'
-const resultado = texto.charCodeAt( 6 )
+const string = 'Aprendendo Javascript'
+const resultado = string.slice( 11 , 21 )
 console.log( resultado )
 ```
 
-No código acima o método retorna o código a letra "r" que é o código 114, pois é o caractere que está na posição 6.
+Observe que foi recortado da posição 11 até a 21 e retornado o texto "Javascript".
 
-- [X] **`concat()`** - Concatena, funde, une, junta uma string em outra, no código a seguir juntamos as strings textOne e textTwo.
+Podemos usar o método slice() com somente um parâmetro, desta maneira como no exemplo a seguir:
 
 ```js
-const textOne = 'React - '
-const textTwo = 'Node'
-const resultado = textOne.concat( textTwo )
+const string = 'Aprendendo Javascript'
+const resultado = string.slice( 11 )
 console.log( resultado )
 ```
 
-- [X] **`fromCharCode()`** - Converte um código informado no caractere correspondente, o script a seguir converte o código 66 no caractere correspondente que é o "B":
+Desta maneira todo conteúdo antes da posição 11 será eliminado e será retornado o texto "Javascript".
+
+Podemos usar o método slice() em vetores também:
 
 ```js
-const resultado = String.fromCharCode( 66 )
+const transportes = [ 'avião' , 'moto' , 'carro' , 'trem' , 'navio' ]
+const terrestres = transportes.slice( 1 , 4 )
+console.log( terrestres )
+```
+
+Serão armazenado no array terrestres os transportes moto, carro e trem.
+
+- [X] **`split()`** - O método split() subdivide uma string sempre que encontrar o caractere especificado como divisor, no nosso código definimos o caractere divisor sendo o espaço, desta maneira será criado um array e em cada posição do array será inserida uma ocorrência.
+
+```js
+const string = 'Aprendendo Javascript'
+const resultado = string.split( ' ' )
+console.log( resultado.length )
+```
+
+O resultado deste script é dois, pois temos uma string com duas palavras separadas com espaços uma da outra, então a palavra "Aprendendo" fica na posição [0], "Javascript" fica na posição [1].
+
+Caso seja necessário criar um array com as letras separadas basta usar como o exemplo a seguir.
+
+```js
+const string = 'Aprendendo Javascript'
+const resultado = string.split( '' )
+console.log( resultado.length )
+```
+
+Neste código o valor retornado como tamanho do array é 21, pois, agora cada caractere será armazenado em
+uma posição do array.
+
+Ainda podemos indicar um limite para a divisão, veja o código a seguir que especifica um limite de 2, ou seja será feito o split, porém somente até a segunda ocorrência, então o código a seguir retorna "Aprendendo,Javascript".
+
+```js
+const string = 'Aprendendo Javascript'
+const resultado = string.split( ' ' , 2 )
 console.log( resultado )
 ```
+
+- [X] **`substr()`** - O método substr() funciona de forma semelhante ao método slice(), com uma diferença básica no segundo parâmetro, que indica o tamanho do corte, veja o exemplo que retorna o texto "Java", indicamos o início do corte na posição 11 e o tamanho como 4, então, a partir da posição 11 serão recortados os 4 caracteres.
+
+```js
+const string = 'Aprendendo Javascript'
+const resultado = string.substr( 11 , 4 )
+console.log( resultado )
+```
+
+- [X] **`toLowerCase()`** - Converte a string inteira para caracteres minúsculos, veja o código de exemplo.
+
+```js
+const string = 'Aprendendo Javascript'
+const resultado = string.toLowerCase()
+console.log( resultado )
+```
+
+O resultado do código será o texto todo com letras minúsculas.
+
+- [X] **`toUpperCase()`** - Converte a string inteira para caracteres maiúsculos, veja o código de exemplo.
+
+```js
+const string = 'Aprendendo Javascript'
+const resultado = string.toUpperCase()
+console.log( resultado )
+```
+
+O resultado do código será o texto todo com letras maiúsculas.
