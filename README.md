@@ -1,61 +1,25 @@
-# Strings P4 - Método
+# ScrollIntoView
 
-- [X] **`toString()`** - Converte um valor qualquer em uma string.
+Este método rola a página até que o elemento indicado como parâmetro esteja no topo da janela.
+O método Element.scrollIntoView() move o elemento ao qual é aplicado para a área visível da janela do navegador.
 
-```js
-const number = 10
-const resultado = number.toString()
-console.log( resultado )
-```
+- `element.scrollIntoView()`                      // Equivalente a element.scrollIntoView(true)
+- `element.scrollIntoView( alignToTop )`            // Argumentos booleanos
+- `element.scrollIntoView( scrollIntoViewOptions )` // argumento Objeto
 
-Será impresso o numeral 10.
+- `alignToTop` (opcional) - o parâemtro alignToTop é um valor Boolean. Se true, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a scrollIntoViewOptions: **`{block: "start", inline: "nearest"}`**. Este é o valor default.
 
-Uma forma de uso muito interessante do método toString é a possibilidade de retornar o numeral indicado na base,
-2, base 8 ou base 16, ou seja, converter em binário, octal ou hexadecimal, veja o código de exemplo.
+Se false, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. 
+Corresponde a scrollIntoViewOptions: **`{block: "end", inline: "nearest"}`**
 
-```js
-const decimal = 15
-const binario = decimal.toString( 2 )
-const octal = decimal.toString( 8 )
-const hexadecimal = decimal.toString( 16 )
-console.log( decimal )
-console.log( binario )
-console.log( octal )
-console.log( hexadecimal )
-```
-
-O código acima converte o numeral 15 para as bases, 2, 8 e 16, veja o resultado.
-
-- [X] **`trim()`** - Remove os espaços antes e depois da string especificada. No código abaixo serão removidos todos os espaços no início e no final da string, os espaços no meio da string não são removidos.
+- `scrollIntoViewOptions` (opcional): o parâemtro `scrollIntoViewOptions` é um booleano ou um objeto com as seguintes opções:
 
 ```js
-const string = ' Aprendendo Javascript '
-const resultado = string.trim()
-console.log( resultado )
+{
+  behavior: "auto"  | "instant" | "smooth",
+  block:    "start" | "center" | "end" | "nearest",
+  inline:   "start" | "center" | "end" | "nearest"
+}
 ```
 
-- [X] **`substring()`** - O método substring() extrai os caracteres de uma string, entre dois índices especificados, e retorna a nova sub string. Este método extrai os caracteres em uma sequência entre "start" e "end", sem incluir o próprio "end". Se "start" for maior que "end", esse método trocará os dois argumentos, significando str.substring(1, 4) == str.substring(4, 1). Se "start" ou "end" for menor que 0, será tratado como se fosse 0. O método substring() não altera a sequência original.
-
-```js
-const string = 'Hello World!'
-const resultado = string.substring( 6 )
-console.log( resultado )
-```
-
-## Usando caracteres especiais na string
-
-Em alguns momentos vamos precisar usar aspas, adicionar tabulação, quebra de linha, etc, em nossas strings e para
-estes casos temos que indicar estes caracteres dentro da string, veja um exemplo a seguir de uma string com aspas.
-
-```js
-const string = 'Aprendendo Javascript - \'JS\' - Curso de Javascript'
-console.log( string )
-```
-
-Código  | Descrição
---------|----------------------------
-\n      | Quebra de linha.
-\r      | Retorno de carro, ENTER
-\t      | Tabulação TAB
-\b      | Backspace
-\f      | Form feed, adiciona um espaço
+Caso seja um valor booleano, true corresponde a **`{block: "start"}`** e false a **`{block: "end"}`**.
