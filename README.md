@@ -1,72 +1,173 @@
-# Cookies JavaScript
+## Git
 
-Os cookies permitem armazenar informações do usuário em páginas da web.
+### Instalação
 
-## O que são cookies?
+https://git-scm.com/download
 
-Cookies são dados armazenados em pequenos arquivos de texto no seu computador. Quando um servidor da Web envia uma página da Web para um navegador, a conexão é encerrada e o servidor esquece tudo sobre o usuário. Os cookies foram inventados para resolver o problema "como lembrar informações sobre o usuário": Quando um usuário visita uma página da web, seu nome pode ser armazenado em um cookie. Na próxima vez que o usuário visitar a página, o cookie "lembrará" seu nome.
+### Documentação
 
-## Crie um cookie com JavaScript
+https://git-scm.com/doc
 
-JavaScript pode criar, ler e excluir cookies com a propriedade document.cookie
+## CENAS
 
-Com JavaScript, um cookie pode ser criado assim:
+- [x] Você deseja criar pontos na história da produção do seu projeto
+- [x] Você deseja verificar mudanças feitas no seu projeto
 
-```js
-document.cookie = 'username = Roger Luiz'
+- [x] Você começa uma nova funcionalidade no seu projeto, sem estragar o que já foi feito.
+- [x] Você adiciona as novas funcionalidades ao seu projeto em produção
+- [x] Você quer deletar a branch da nova funcionalidade, depois de aplicar em seu projeto.
+
+- [x] Você quer colocar seu projeto na nuvem.
+
+- [x] Você vai pegar um projeto já iniciado, para trabalhar com o time
+- [x] Você precisa resolver um conflito.
+- [x] Antes de enviar a resolução, precisamos atualizar o projeto local.
+
+- [x] Você precisa voltar um arquivo para um determinado momento da linha do tempo.
+- [x] Você precisa recuperar algo deletado.
+
+## Cmandos
+
+- **`git init`** - Cria um repositório Git vazio ou reinicialize um existente. <br><br>
+
+- **`git status`** - Informa o estado das alterações do nosso projeto. <br><br>
+
+- **`git add [file]`** - Adiciona ou atualiza mudanças para irem para o repositório.
+- **`git add .`** - Você pode adicionar todos os arquivo usando o " . ". <br><br>
+
+- **`git commit -m "message"`** - Registra alterações no repositório.
+- **`git commit -am "message"`** - Atualiza o repositório e registra alterações no repositório ao mesmo tempo. <br><br>
+
+- **`git log`** - Mostra os pontos na "linha do tempo" do repositório ( commit ).
+- **`git log --oneline`** - Mostra os pontos na "linha do tempo" de forma mais resumida.
+- **`git log --abbrev-commit`** - Ao vez de mostrar o hash com 40 caracteres, mostra apenas com 7 caracteres.
+- **`git log --pretty=oneline`** - Faz com que caiba tudo em uma linha.
+- **`git log --graph`** - Desenha uma representação gráfica dos commits no lado esquerdo da saída. <br><br>
+
+- **`git diff`** - Mostra o que foi alterado em um arquivo, de vermelho o que foi excluído de verde o que foi adicionando. Use o "git diff" antes de dar o "git add". <br><br>
+
+- **`git show`** - Apresenta o último ponto na "história" do nosso projeto.
+- **`git show [hash]`** - Apresenta determinado ponto na "história" do nosso projeto. <br><br>
+
+- **`git branch`** - Lista, cria ou exclui ramificações. <br><br>
+
+- **`git checkout [hash]`** - Alterna ramificações ou restaura arquivos da árvore de trabalho.
+- **`git checkout [arquivo_modificado]`** - Descarta as mudanças feitas no arquivo. Use antes de dar o "git add".
+- **`git checkout -b [minha-feature]`** - Cria uma nova ramificação no nosso projeto.
+- **`git checkout master`** - Vai para a ramificação master.
+- **`git checkout [minha_ramificação]`** - Vai para a ramificação criada pelo desenvolvedor. <br><br>
+
+- **`git reset HEAD`** - Remove um arquivo adicionado pelo "git add". Usar depois do "git add" e antes do "git commit".
+- **`git reset --hard [hash]`** - Remove um commit. <br><br>
+
+- **`git merge [minha_ramificação]`** - Faz a fusão de uma ramificação x com a ramificação master. Para fazer a fusão você tem que estar na ramificação master. <br><br>
+
+- **`git remote`** - Verifica se existe um repositório remoto. <br><br>
+
+- **`git push`** - Envia alterações locais para o repositório remoto. <br><br>
+
+- **`git clone [link_repositório]`** - Clonar um projeto / repositório.  <br><br>
+
+- **`git pull`** - Puxa do repositório remoto.
+
+Exemplo de um hash:
+  - a96c4c3
+  - a96c4c3936dbaa78be7254eb7b6b9b86fc46adc0
+
+O que é uma ramificação?
+
+> As ramificações do Git são um indicador efetivo de um instantâneo de suas mudanças. Quando você quiser adicionar um novo recurso ou corrigir um bug—não importa o tamanho, grande ou pequeno—basta criar uma nova ramificação para encapsular as mudanças. Isso faz com que seja mais difícil um código instável ser mesclado com a base de código principal e dá a chance de você limpar seu histórico futuro antes de fazer a mesclagem na ramificação principal.  
+
+## Padronização de commits
+
+Para poder padronizar seus commits, você vai precisar de duas ferramentas, o [commitlint](https://github.com/conventional-changelog/commitlint) e o [commitizen](https://github.com/commitizen/cz-cli), você pode instalar essas dependências usando o npm ou o yarn.
+
+Caso você não queira ler a documentação, recomendo dois vídeos sobre como usar as ferramentas para padronização:
+
+- Rocketseat - [Padronizando mensagens de commit do Git | Code/Drops #12](https://www.youtube.com/watch?v=erInHkjxkL8).
+- Angelo Luz - [Git - Padronização de commits - gitmoji, commitlint e commitizen](https://www.youtube.com/watch?v=49a9M17ZikI&t=975s). <br><br>
+
+- [X] **Formato da mensagem**: Cada mensagem de commit consiste em um **cabeçalho**, um **corpo** e um **rodapé**. 
+
+- [X] **Cabeçalho**: Tem um formato pré-definido, que inclui um **tipo** e um **título**:
+
+```
+<tipo>(<escopo opcional>): <título>
+
+<corpo opcional>
+
+<rodapé opcional>
+
+Exemplos:
+fix(integracao-erp): xxxxxxx
+improve(app-toolbox): xxxxxxx
+docs: Instruções de iniciar projeto com docker
 ```
 
-Você também pode adicionar uma data de validade (no horário UTC). Por padrão, o cookie é excluído quando o navegador é fechado:
+- [X] O **cabeçalho** é obrigatório.
 
-```js
-document.cookie = 'username = Roger Luiz expires = Thu, 18 Dec 2013 12:00:00 UTC'
+Qualquer linha da mensagem do commit não pode ter mais de 100 caracteres! Assim fica mais fácil para ler no GitHub, Gitlab e outras ferramentas de git.
+
+- [X] **Título**: O título contém uma descrição sucinta da mudança:
+
+* use o imperativo, tempo presente: "mudança" não "mudou" nem "muda".
+* não capitalize a primeira letra.
+* sem ponto (.) no final.
+
+- [X] **Corpo**: Um corpo de mensagem de commit mais longo PODE ser fornecido após o título, fornecendo informações contextuais adicionais sobre as alterações no código. Configure a mensagem com um wrap de 80 caracteres. Use para explicar "o que" e "porque" foi realizado essa modificação, ao invez de "como". O corpo DEVE começar depois de uma linha em branco após a descrição.
+
+- [X] **Rodapé**: Um rodapé PODE ser fornecido depois de uma linha em branco após o corpo. Caso exista um ticket no jira, criar um referência assim: `issue TP-666` ou `closes issue TP-666`.
+
+- [X] **Reverter um commit**: Se o commit reverte um commit anterior, ele deve começar por `revert:`, seguido pelo cabeçalho do commit revertido. No corpo, ele deve dizer: `Isso reverte o commit <hash> .`, onde o hash é o SHA do commit sendo revertido.
+
+## Tipos
+
+Deve ser um dos seguintes:
+
+* **build**: Alterações que afetam o sistema de build ou dependências externas.
+* **static**: Alterações no conteúdo de arquivos estáticos (dados .json, imagens, etc).
+* **ci**: Alterações em nossos arquivos e scripts de configuração de CI.
+* **cd**: Alterações em nossos arquivos e scripts de configuração para CD.
+* **docs**: Somente alterações na documentação.
+* **feat**: Um novo recurso.
+* **fix**: Uma correção de bug da aplicação.
+* **perf**: Uma alteração de código que melhora o desempenho.
+* **refactor**: Uma alteração de código que não corrige um bug nem adiciona um recurso.
+* **improve**: Alguma alteração de código que melhore o comportamento de um recurso.
+* **style**: Alterações que não afetam o significado do código (espaço em branco, formatação, ponto e vírgula, etc).
+* **test**: Adicionando testes ausentes ou corrigindo testes existentes.
+* **revert**: Reverter para um commit anterior.
+
+## Por quê?
+
+* Criação automatizada de CHANGELOGs;
+* Determinar automaticamente um aumento de versionamento semântico (com base nos tipos de commits);
+* Comunicar a natureza das mudanças para colegas de equipe, o público e outras partes interessadas de forma padronizada
+* Disparar processos de build e deploy;
+* Facilitar a contribuição de outras pessoas em seus projetos, permitindo que eles explorem um histórico de commits mais estruturado e com melhor rastreabilidade.
+
+## Alias
+Você pode criar alias para os comandos do git, basta ir no arquivo ".gitconfig" e definir seus alias.
+No uninx ( Linux e Mac ) o arquivo ".gitconfig" fica localizado em: /home/seuusuário/.gitconfig
+
+Alias que eu gosto de usar:
+
 ```
-
-Com um parâmetro path, você pode dizer ao navegador a que allCookiesminho o cookie pertence. Por padrão, o cookie pertence à página atual.
-
-```js
-document.cookie = 'username = Roger Luiz expires = Thu, 18 Dec 2013 12:00:00 UTC path=/'
+[alias]
+  i = init
+  a = add
+  ci = commit
+  co = checkout
+  cm = checkout master
+  cb = checkout -b
+  st = status -sb
+  sf = show --name-only
+  pom = push origin master -u
+  ps = push
+  lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
+  incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
+  outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
+  unstage = reset HEAD --
+  undo = checkout --
+  rollback = reset --soft HEAD~1
 ```
-
-## Leia um cookie com JavaScript
-
-Com JavaScript, os cookies podem ser lidos assim:
-
-```js
-const x = document.cookie
-```
-
-`document.cookie` - retornará todos os cookies em uma sequência semelhante a: cookie1 = value, cookie2 = valor, cookie3 = valor
-
-## Alterar um cookie com JavaScript
-
-Com JavaScript, você pode alterar um cookie da mesma maneira que o cria:
-
-```js
-document.cookie = 'username = Roger Fernando expires=Thu, 18 Dec 2013 12:00:00 UTC path=/'
-```
-
-O cookie antigo é substituído.
-
-## Excluir um cookie com JavaScript
-
-Excluir um cookie é muito simples. Você não precisa especifiallCookiesr um valor de cookie ao excluir um cookie.
-
-Basta definir o parâmetro expires para uma data passada:
-
-```js
-document.cookie = 'username = expires = Thu, 01 Jan 1970 00:00:00 UTC path=/'
-```
-
-Você deve definir o allCookiesminho do cookie para garantir que você exclua o cookie correto. Alguns navegadores não permitem excluir um cookie se você não especifiallCookiesr o allCookiesminho.
-
-## A sequência de cookies
-
-A document.cookiepropriedade se parece com uma sequência de texto normal. Mas não é.
-Mesmo se você escrever uma sequência inteira de cookies em document.cookie, quando a ler novamente, poderá ver apenas o par nome-valor.
-
-Se você definir um novo cookie, os cookies mais antigos não serão substituídos. 
-O novo cookie é adicionado ao document.cookie, portanto, se você ler document.cookie novamente, obterá algo como:
-cookie1 = valor, cookie2 = valor.
-
-Se você deseja encontrar o valor de um cookie especifiallCookiesdo, deve escrever uma função JavaScript que procure o valor do cookie na allCookiesdeia de cookies.
