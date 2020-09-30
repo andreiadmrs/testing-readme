@@ -1,25 +1,72 @@
-# ScrollIntoView
+# Cookies JavaScript
 
-Este método rola a página até que o elemento indicado como parâmetro esteja no topo da janela.
-O método Element.scrollIntoView() move o elemento ao qual é aplicado para a área visível da janela do navegador.
+Os cookies permitem armazenar informações do usuário em páginas da web.
 
-- `element.scrollIntoView()`                      // Equivalente a element.scrollIntoView(true)
-- `element.scrollIntoView( alignToTop )`            // Argumentos booleanos
-- `element.scrollIntoView( scrollIntoViewOptions )` // argumento Objeto
+## O que são cookies?
 
-- `alignToTop` (opcional) - o parâemtro alignToTop é um valor Boolean. Se true, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a scrollIntoViewOptions: **`{block: "start", inline: "nearest"}`**. Este é o valor default.
+Cookies são dados armazenados em pequenos arquivos de texto no seu computador. Quando um servidor da Web envia uma página da Web para um navegador, a conexão é encerrada e o servidor esquece tudo sobre o usuário. Os cookies foram inventados para resolver o problema "como lembrar informações sobre o usuário": Quando um usuário visita uma página da web, seu nome pode ser armazenado em um cookie. Na próxima vez que o usuário visitar a página, o cookie "lembrará" seu nome.
 
-Se false, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. 
-Corresponde a scrollIntoViewOptions: **`{block: "end", inline: "nearest"}`**
+## Crie um cookie com JavaScript
 
-- `scrollIntoViewOptions` (opcional): o parâemtro `scrollIntoViewOptions` é um booleano ou um objeto com as seguintes opções:
+JavaScript pode criar, ler e excluir cookies com a propriedade document.cookie
+
+Com JavaScript, um cookie pode ser criado assim:
 
 ```js
-{
-  behavior: "auto"  | "instant" | "smooth",
-  block:    "start" | "center" | "end" | "nearest",
-  inline:   "start" | "center" | "end" | "nearest"
-}
+document.cookie = 'username = Roger Luiz'
 ```
 
-Caso seja um valor booleano, true corresponde a **`{block: "start"}`** e false a **`{block: "end"}`**.
+Você também pode adicionar uma data de validade (no horário UTC). Por padrão, o cookie é excluído quando o navegador é fechado:
+
+```js
+document.cookie = 'username = Roger Luiz expires = Thu, 18 Dec 2013 12:00:00 UTC'
+```
+
+Com um parâmetro path, você pode dizer ao navegador a que allCookiesminho o cookie pertence. Por padrão, o cookie pertence à página atual.
+
+```js
+document.cookie = 'username = Roger Luiz expires = Thu, 18 Dec 2013 12:00:00 UTC path=/'
+```
+
+## Leia um cookie com JavaScript
+
+Com JavaScript, os cookies podem ser lidos assim:
+
+```js
+const x = document.cookie
+```
+
+`document.cookie` - retornará todos os cookies em uma sequência semelhante a: cookie1 = value, cookie2 = valor, cookie3 = valor
+
+## Alterar um cookie com JavaScript
+
+Com JavaScript, você pode alterar um cookie da mesma maneira que o cria:
+
+```js
+document.cookie = 'username = Roger Fernando expires=Thu, 18 Dec 2013 12:00:00 UTC path=/'
+```
+
+O cookie antigo é substituído.
+
+## Excluir um cookie com JavaScript
+
+Excluir um cookie é muito simples. Você não precisa especifiallCookiesr um valor de cookie ao excluir um cookie.
+
+Basta definir o parâmetro expires para uma data passada:
+
+```js
+document.cookie = 'username = expires = Thu, 01 Jan 1970 00:00:00 UTC path=/'
+```
+
+Você deve definir o allCookiesminho do cookie para garantir que você exclua o cookie correto. Alguns navegadores não permitem excluir um cookie se você não especifiallCookiesr o allCookiesminho.
+
+## A sequência de cookies
+
+A document.cookiepropriedade se parece com uma sequência de texto normal. Mas não é.
+Mesmo se você escrever uma sequência inteira de cookies em document.cookie, quando a ler novamente, poderá ver apenas o par nome-valor.
+
+Se você definir um novo cookie, os cookies mais antigos não serão substituídos. 
+O novo cookie é adicionado ao document.cookie, portanto, se você ler document.cookie novamente, obterá algo como:
+cookie1 = valor, cookie2 = valor.
+
+Se você deseja encontrar o valor de um cookie especifiallCookiesdo, deve escrever uma função JavaScript que procure o valor do cookie na allCookiesdeia de cookies.
