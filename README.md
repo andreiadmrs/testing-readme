@@ -45,8 +45,78 @@
 - **`<rp>`** - Texto a ser mostrado caso o browser não suporte anotações ruby.
 - **`<rt>`** - Texto de anotação ruby.
 - **`<section>`** - Bloco de seção do documento.
-- **`<source>`** - Apontador para os arquivos de mídia das tags <audio> e <video>.
+- **`<source>`** - Apontador para os arquivos de mídia das tags `<audio>` e `<video>`.
 - **`<summary>`** - Cabeçalho para a tag `<details>`.
 - **`<time>`** - Representa uma data o hora.
 - **`<vídeo>`** - Tag para inserir vídeos na página.
 - **`<wbr>`** - Especifica uma quebra de linha para textos longos, especificamos onde o texto será quebrado.
+
+## Tags já existentes em HTML 4 que foram continuadas
+
+- **`<!doctype>`** - Definição do tipo de documento.
+- **`<a>`** - Âncoras, links.
+- **`<abbr>`** - Marca um texto que será configurado como abreviação.
+- **`<address>`** - Configura um texto como sendo um endereço.
+- **`<area>`** - Criação de mapas em imagens.
+- **`<b>`** - Bold/Negrito.
+- **`<base>`** - Configuração da URL base para os links da página.
+- **`<bdo>`** - Altera a direção do texto.
+- **`<blockquote>`** - Texto de citação.
+- **`<body>`** - Corpo da página, onde estão os elementos visíveis.
+- **`<br>`** - Quebra de linha.
+- **`<button>`** - Botão padrão, sem ação pré-configurada.
+- **`<caption>`** - Cabeçalho para tabelas.
+- **`<cite>`** - Insere uma citação no meio de uma frase.
+- **`<code>`** - Configura um texto como um código.
+- **`<col>`** - Atributos para colunas de tabelas.
+- **`<colgroup>`** - Grupo de colunas de tabelas.
+- **`<dd>`** - Descrição de itens de listas de definição.
+- **`<del>`** - Configura o texto como deletado.
+- **`<div>`** - Caixa/container genérico para conteúdo.
+- **`<dfn>`** - Texto de definição para ser inserido no meio de frases.
+- **`<dl>`** - Criar listas de definição.
+- **`<em>`** - Configuração de texto em ênfase/destacado.
+- **`<fieldset>`** - Agrupa elementos.
+- **`<form>`** - Formulário.
+- **`<h1> a <h6>`** - Títulos.
+- **`<head>`** - Cabeçalho do documento, com tags de “configuração” da página.
+- **`<hr>`** - Horizontal rule, traça uma barra (linha) horizontal na página.
+- **`<html>`** - Tag principal da página, marca o início e o fim do código.
+- **`<i>`** - Itálico.
+- **`<iframe>`** - Quadro dinâmico, carrega uma página dentro dele e pode ser posicionado na página principal.
+- **`<img>`** - Inserir imagens.
+- **`<input>`** - Elementos de formulário para entrada de dados.
+- **`<ins>`** - Formatação de texto inserido, ao contrário da tag `<del>`.
+- **`<kbd>`** - Formatação para indicar que o texto deve ser digitado.
+- **`<label>`** - Etiqueta para elementos de formulário.
+- **`<legend>`** - Título do elemento `<fieldset>`.
+- **`<li>`** - Itens de uma lista.
+- **`<link>`** - Referência para arquivos externos tipo, CSS, JS.
+- **`<map>`** - Definição mapas em imagens.
+- **`<meta>`** - Metadados definidos para o documento.
+- **`<noscript>`** - Texto mostrado quando o browser não suporta script.
+- **`<object>`** - Objeto inserido na página, áudio, vídeo, etc.
+- **`<ol>`** - Lista ordenada.
+- **`<optgroup>`** - Grupo de elementos `<option>`.
+- **`<p>`** - Parágrafo.
+- **`<param>`** - Parâmetros para a tag `<object>`.
+- **`<pre>`** - Texto pré-formatado.
+- **`<q>`** - Texto de citação, insere aspas no início e o fim.
+- **`<samp>`** - Saída de um código/programa.
+- **`<script>`** - Bloco de scripts a serem executados na página, javascript por exemplo.
+- **`<select>`** - Lista para seleção de itens, formulário.
+- **`<span>`** - Bloco/container genérico, semelhante ao `<div>`, porém não quebra linha.
+- **`<strong>`** - Formatação tipo negrito.
+- **`<style>`** - Definição de estilos CSS.
+- **`<sub>`** - Texto sobescrito.
+- **`<sup>`** - Texto Sobrescrito.
+- **`<table>`** - Tabela.
+- **`<tbody>`** - Corpo da tabela.
+- **`<td>`** - Table division, coluna da tabela.
+- **`<tr>`** - Table row, linha da tabela.
+- **`<th>`** - Coluna de cabeçalho da tabela.
+- **`<tfoot>`** - Rodapé da tabela.
+- **`<textarea>`** - Campo de texto multilinha, formulário.
+- **`<title>`** - Título da página.
+- **`<ul>`** - Lista não ordenada.
+- **`<var>`** - Texto que representa variável.
