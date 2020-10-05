@@ -1,7 +1,7 @@
-# Tag P, parágrafo
+# Tags H, h1 até h6
 
-O elemento p representa um parágrafo
+Tag h - O elemento h representa um título, com nível de hierarquia de h1 até h6, variando o tamanho.
 
-- Display = Block
-- Block = As tags com o display block, não aceitam outros conteúdos na mesma linha que elas
-- Elemento de fluxo: É renderizado
+- Categoria: Fluxo e Cabeçalho
+- Display: Block
+- DOM Interface: Uses HTMLElement
