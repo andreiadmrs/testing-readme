@@ -1,20 +1,22 @@
-# Tags code e pre
+# Tags del e ins
 
-As tags code e pre NÃO SÃO corelacionadas ou seja, não depende uma da outra.
+As tags del e ins **NÃO** depedem umas das outras.
 
-- [X] **`<code>`** - A tag code serve para básicamente destacar um pedaço de código, diferenciar um pedaço de código de um texto normal.
-  - Display: Inline
-  - Categoria: Fluxo e Fraseado
-  - Contido por: Fraseado
-  - Filhos: Fraseado
+- [X] **`<del>`** - O elemento `<del>` irá representar um conteúdo que foi removido, excluido ou eliminado do nosso texto. O elemento del representa uma remoção dos elementos document.del não deve cruzar os limites implícitos do parágrafo.
 
-O elemento code representa um fragmento de código de computador. Pode ser um nome de elemento XML, um nome de arquivo, um programa de computador ou qualquer outra string que um computador reconheça. Não existe uma maneira formal de indicar o idioma do código do computador que está sendo marcado. Os autores que desejam marcar elementos de código com o idioma usado, por exemplo para que os scripts de destaque de sintaxe possam usar as regras corretas, o atributo de classe, por exemplo adicionando uma classe prefixada com "language-" ao elemento
+- Display: inline-block
+- Categoria: Fluxo
+- Contido por: Fraseado
+- Filhos: Transparente (Fraseado)
 
-- [X] **`<pre>`** - A tag pre é de pré-formatação, ela vai renderizar o texto no browser exatamente como foi digitado no código.
-  - Display: Block
-  - Categoria: Fluxo
-  - Contido por: Fluxo
-  - Contido por: Fluxo
-  - Filhos: Fraseado
+- [X] **`<ins>`** - O elemento `<ins>` irá representar um conteúdo que foi adicionado, uma inserção.
+Descrição: O elemento ins representa uma adição ao documento.ins elementos não devem cruzar os limites implícitos de parágrafos.
 
-O elemento pre representa um bloco de texto pré-formatado, no qual a estrutura é representada por convenções tipográficas e não por elementos. Alguns exemplos de casos em que o elemento pre pode ser usado: Para representar um bloco de código de computador, o elemento pre pode ser usado com um elemento de código; para representar um bloco de saída do computador, o elemento pré pode ser usado com um elemento samp. Da mesma forma, o elemento kbd pode ser usado dentro de um pré elemento para indicar o texto que o usuário deve inserir.
+- Display: inline-block
+- Categoria: Fluxo
+- Contido por: Fraseado
+- Filhos: Transparente (Fraseado)
+
+- [X] **`del e ins ( parametros )`**
+  - cite = É um link para um arquivo, uma página com a explicação do por que esse conteúdo está marcado como deletado. 
+  - datetime = Data e Hora que esse conteúdo foi removido OU adicionado.
