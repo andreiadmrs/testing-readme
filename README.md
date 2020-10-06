@@ -1,38 +1,30 @@
-# Tag br, quebra de linha
+# Tag button
 
-- [X] **`Tag br: (Break Line)`**
-  - Display: Inline
-  - Categoria: Fluxo e FrasEado
+- [X] **`button`** - button é um botão 100% programado em javascript e 100% formatável pelo css.
+  - Display: Inline 
+  - Categoria: Fluxo, Fraseado e Interativo
   - Contido por: Fraseado
-  - Filhos: None
+  - Filhos: Fraseado
 
-O elemento br representa uma quebra de linha. Os elementos br devem ser usados apenas para quebras de linha que realmente fazem parte do conteúdo, como em poemas ou endereços. Os elementos br não devem ser usados para separar grupos temáticos em um parágrafo. Se um parágrafo consistir em nada além de um único elemento br, ele representa uma linha em branco do espaço reservado (por exemplo, como em um modelo). Essas linhas em branco não devem ser usadas para fins de apresentação.
+DOM interface: HTMLButtonElement
 
+## Atributos globais
 
-O exemplo a seguir é o uso correto do elemento br:
+- disabled - Se o controle de formulário está desativado
+- form - Associa o elemento a um form elemento
+- formaction - URL a ser usado para o envio do formulário
+- formenctype - Tipo de codificação da lista de entradas a ser usado para envio de formulários
+- formmethod - Variante a ser usada para envio de formulários
+- formnovalidate - Ignorar validação de controle de formulário para envio de formulários
+- formtarget - Contexto de navegação para envio de formulários
+- name - Nome do elemento a ser usado para o envio do formulário e na form.elementsAPI
+- type - Tipo de botão (Comportamento do butão)
+- value - Valor a ser usado para o envio do formulário
 
-```
-<p>P. Sherman<br>
-42 Wallaby Way<br>
-Sydney</p>
-```
+onclick: adiciona uma função ao nosso butão com Javascript
 
-Os exemplos a seguir não são conformes, pois abusam do elemento br:
+## Tipos de butões
 
-```
-<p><a ...>34 comments.</a><br>
-<a ...>Add a comment.</a></p>
-
-<p><label>Name: <input name="name"></label><br>
-<label>Address: <input name="address"></label></p>
-```
-
-Aqui estão alternativas para os exemplos acima, que estão corretas:
-
-```
-<p><a ...>34 comments.</a></p>
-<p><a ...>Add a comment.</a></p>
-
-<p><label>Name: <input name="name"></label></p>
-<p><label>Address: <input name="address"></label></p>
-```
+- submit: função de submeter, fazer o envio dos dados
+- reset: Serve para limpar campos de formulário
+- button: Sem ação pré definida
