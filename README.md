@@ -1,13 +1,11 @@
-# Tag base, apontamento de local padrão
+# Tag bdo, diração do texto
 
-A tag base basicamente é uma tag que vai criar um apontamento BASE para os atributis src e href ou qualquer outro atibuto que precisa da referência de um local para um arquivo seja ela do nosso site ou externo. Usmos apenas uma!
+- [X] **`bdo`** - a tag bdo controla a direção do texto
+  - Display: Inline
+  - Categoria: Fluxo e Fraseado
+  - Contido por: Fluxo
+  - Filhos: Fluxo
 
-DOM Interface:
-Interface HTMLBaseElement : HTMLElement {}
-attribute DOMString href;
-attribute DOMString target;
-
-- Dislplay: none
-- Categoria: Metadados
-- Contido por: `<head>`
-- Flihos: none
+- dir
+  - ltr = left to right
+  - rtl = right to left
