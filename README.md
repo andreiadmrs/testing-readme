@@ -1,12 +1,15 @@
-# Tags article e a Nova Semântica
+# Tag aside da Nova Semântica
 
-A tag article representa uma seção independente no documento, podemos ter quantos articles necessários, cada um representando uma área do documento. Com conteúdos diferentes de: Cabeçalho, navegação e rodapé.
+A tag aside representa uma seção dentro da página que vai constituir, que vai ter um conteúdo diretamente relacionado ao conteúdo principal da página 
 
-Exemplos potenciais para o elemento `<article>`:
-Um post dentro de um fórum, Um artigo dentro de um jornal, revista, um comentário, Postagem no blog, Notícia, etc.
+Dentro do aside podemos ter: menu, caixa lateral, explicação de parte do texto, uma sitação.
+
+**Dica:** o conteúdo `<aside>` pode ser colocado como barra lateral em um artigo.
+
+O elemento de aside representa uma seção de uma página que consiste em conteúdo tangencialmente relacionado ao conteúdo em torno do elemento de lado e que pode ser considerado separado desse conteúdo. Essas seções são geralmente representadas como barras laterais na tipografia impressa. O elemento pode ser usado para efeitos tipográficos como aspas ou barras laterais, para publicidade, para grupos de elementos de navegação e para outro conteúdo considerado separado do conteúdo principal da página.
 
 - Display: Block
-  - Categoria: fluxo e Seção
-  - Contido: Fluxo
-  - Filhos: Fluxo
-  - DOM interface: Uses HTMLElement
+  - Categoria: Fluxo e Seção
+  - Contido por: Fluxo
+  - Filhos: fluxo
+  - DOM Interface: Uses HTMLElement
