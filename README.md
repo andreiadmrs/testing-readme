@@ -1,17 +1,16 @@
-Interface HTMLAreaElement: HTMLElement{
+# Tag abbr - Abreviações
 
-  attribute DOMString alt;
-  attribute DOMString coords;
-  attribute DOMString shape;
-  attribute DOMString target;
-  attribute DOMString download;
-  attribute DOMString rel;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
-  attribute DOMString hreflang;
-  attribute DOMString type;
-  attribute DOMString referrerPollcy;
+A tag `<abbr>` define uma abreviação ou acrônimo, como "HTML", "Mr.", "Dec.", "ASAP", "ATM".
 
-};
+**Dica:** Abreviação e acrônimo são versões reduzidas de outra coisa. Ambos são frequentemente representados como uma série de letras.
 
-HTMLAreaElement implements
-HTMLHyperlinkElementUtlls;
+Marcar abreviações pode fornecer informações úteis para navegadores, sistemas de tradução e mecanismos de busca.
+
+**Dica:** O atributo global title é usado com a tag `<abbr>` para mostrar a descrição da abreviação / sigla quando você passa o mouse sobre o elemento `<abbr>`.
+
+- [X] **`<abbr>`**
+  - Display: Inline
+  - Categoria: Fluxo e Fraseado
+  - Contido por: Fraseado
+  - Filhos: fraseado
+  - Atributos: title e global
