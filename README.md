@@ -18,14 +18,14 @@ HTMLAnchorElement implements HTMLHyperlinkElementUtils;
 
 ## Valores para os atributos
 
-- [X] **`TARGET`** 
+- [X] **`target`** - Como o link deve ser aberto
   - `_self` - Abre na mesma janela
   - `_blank` - Abre o link em uma nova janela.
   - `_parent` 
   - `_top`
   - `framename`
 
-- [X] **`MEDIA`**
+- [X] **`media`** - Para qual dispositivos é mais adequado
   - `all` - (padrão) Adequado para todos os dispositivos
   - `aural` - Sintetizadores de fala auditiva
   - `braille` - Dispositivod de Braille
@@ -35,7 +35,7 @@ HTMLAnchorElement implements HTMLHyperlinkElementUtils;
   - `screen` - Telas de computador
   - `tv` - Televisores
 
-- [X] **`REL`**
+- [X] **`rel`** -  especifica a relação entre o documento atual e o documento/recurso vinculado.
   - `alternate` - Fornece um link para uma representação alternativa do documento (por exemplo, imprimir página, traduzida ou espelhada)
   - `author` - Fornece um link para o autor do documento
   - `bookmark` - URL permanente usado para bookmarking
@@ -50,8 +50,11 @@ HTMLAnchorElement implements HTMLHyperlinkElementUtils;
   - `search` - links de pesquisa para uma ferramenta de pesquisa para o documento
   - `tag` - Uma tag (keyword) para o documento atual
 
-- [X] **`TYPE`**
-- http://www.iana.org/assignments/media-types/media-types.xhtml
+- [X] **`hreflang`** - Linguagem
+  - https://www.w3schools.com/tags/ref_language_codes.asp
+
+- [X] **`type`** - Tipo
+  - http://www.iana.org/assignments/media-types/media-types.xhtml
 
 ```
 <a href="link Completo" target="Onde será aberto" rel="Que tpo de arquivo vai ser chamado atraves deste link" media="Indica para qual mídia esse arquivo é mais adequado" hreflang="Idioma da página" type="Que tipo de conteúdo tem na codificação dessa página">Nome Do Link</a>
