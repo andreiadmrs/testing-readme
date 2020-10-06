@@ -1,15 +1,21 @@
-# Tag aside da Nova Semântica
+# Tag audio, inserindo música e sons na página
 
-A tag aside representa uma seção dentro da página que vai constituir, que vai ter um conteúdo diretamente relacionado ao conteúdo principal da página 
+Um elemento de áudio representa um som ou fluxo de áudio. O conteúdo pode ser fornecido dentro do elemento de áudio. Os agentes do usuário não devem mostrar esse conteúdo para o usuário; destina-se a navegadores da Web mais antigos que não suportam áudio, para que os plug-ins de áudio herdados possam ser tentados ou para mostrar texto aos usuários desses navegadores mais antigos, informando-os sobre como acessar o conteúdo de áudio.O elemento de áudio é um elemento de mídia cujos dados de mídia são ostensivamente dados de áudio. Os atributos src,preload, autoplay, mediagroup, loop, muted, e controls são os atributos comuns a todos os elementos de mídia.
 
-Dentro do aside podemos ter: menu, caixa lateral, explicação de parte do texto, uma sitação.
+- [X] **`<audio>`**
+  - Display: none
+  - Categoria: Fluxo, fraseado e incorporado
+  - Contido por: Qualquer conteúdo
+  - Filhos: depende se tem src
+  - DOM interface
+  - HTMLAudioElement new
 
-**Dica:** o conteúdo `<aside>` pode ser colocado como barra lateral em um artigo.
+## Atributos
 
-O elemento de aside representa uma seção de uma página que consiste em conteúdo tangencialmente relacionado ao conteúdo em torno do elemento de lado e que pode ser considerado separado desse conteúdo. Essas seções são geralmente representadas como barras laterais na tipografia impressa. O elemento pode ser usado para efeitos tipográficos como aspas ou barras laterais, para publicidade, para grupos de elementos de navegação e para outro conteúdo considerado separado do conteúdo principal da página.
-
-- Display: Block
-  - Categoria: Fluxo e Seção
-  - Contido por: Fluxo
-  - Filhos: fluxo
-  - DOM Interface: Uses HTMLElement
+- autoplay: Indica se audio vai tocr automaticamente ou não (verdadeiro ou falso)
+- preload: tamanho da memoria que ele vai usar para buferizar o audio 
+- controls: Exibe a barra de controles
+- loop: Da loop no audio 
+- mediagroup: informar qual midia de grupos o audio pertence
+- muted: Cilenciar 
+- src: link para o audio
