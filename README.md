@@ -1,26 +1,38 @@
-# Tags blockquote e cite, trabalhando com citações
+# Tag br, quebra de linha
 
-- [X] **`<blockquote>`** - A tag blockquote vai representar uma citação longa.
-  - Display: Block
-  - Categoria: Fluxo e Seção
-  - Contido por: Fluxo
-  - Filho: Fluxo
-
-**Dica:** use `<q>` para cotações em linha (curtas).
-
-- [X] **`<cite> (Atributo)`** - URL Especifica a fonte da cotação
-
-DOM Interface:
-Interface HTMLQuoteElement : HTMLElement {
-attribute DOMString cite;
-};
-
-
-- [X] **`<cite> (Tag)`** - A tag cite vai representar um título de uma obra, ou uma referência aos autores A tag `<cite>` define o título de uma obra (por exemplo, um livro, uma música, um filme, um programa de TV, uma pintura, uma escultura etc.). Nota: O nome de uma pessoa não é o título de uma obra.
+- [X] **`Tag br: (Break Line)`**
   - Display: Inline
-  - Categoria: Fluxo e Fraseado
+  - Categoria: Fluxo e FrasEado
   - Contido por: Fraseado
-  - Filho: Fraseado
+  - Filhos: None
 
-DOM Interface:
-Uses HTMLElement;
+O elemento br representa uma quebra de linha. Os elementos br devem ser usados apenas para quebras de linha que realmente fazem parte do conteúdo, como em poemas ou endereços. Os elementos br não devem ser usados para separar grupos temáticos em um parágrafo. Se um parágrafo consistir em nada além de um único elemento br, ele representa uma linha em branco do espaço reservado (por exemplo, como em um modelo). Essas linhas em branco não devem ser usadas para fins de apresentação.
+
+
+O exemplo a seguir é o uso correto do elemento br:
+
+```
+<p>P. Sherman<br>
+42 Wallaby Way<br>
+Sydney</p>
+```
+
+Os exemplos a seguir não são conformes, pois abusam do elemento br:
+
+```
+<p><a ...>34 comments.</a><br>
+<a ...>Add a comment.</a></p>
+
+<p><label>Name: <input name="name"></label><br>
+<label>Address: <input name="address"></label></p>
+```
+
+Aqui estão alternativas para os exemplos acima, que estão corretas:
+
+```
+<p><a ...>34 comments.</a></p>
+<p><a ...>Add a comment.</a></p>
+
+<p><label>Name: <input name="name"></label></p>
+<p><label>Address: <input name="address"></label></p>
+```
