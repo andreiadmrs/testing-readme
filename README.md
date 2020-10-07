@@ -13,5 +13,6 @@ O elemento figure representa algum conteúdo do fluxo, opcionalmente com uma leg
   <figcaption>
     O CONTEÚDO DA QUI E DIRETAMENTE RELACIONADO AO CONTEUDO DENTRO DO <figure> E FORA DO <figcaption>.
   </figcaption>
+  
 </figure>
 ```
