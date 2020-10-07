@@ -1,10 +1,9 @@
-# Tag dialog
+# Tag div (parte 1)
 
-- [X] **`dialog`** - A tag dialog é uma caixa de dialogo.
+- [X] **`div`** - A tag div é um container para qualquer elemento
+  - Display: Block
   - Categoria: Fluxo
   - Contido por: Fluxo
-  - Filhos: Qualquer elemento
+  - filhos: Fluxo
 
-## Atributos
-
-- `open (boleano)` - Especifica que o elemento de diálogo está ativo e que o usuário pode interagir com ele
+O elemento div não tem nenhum significado especial. Representa seus filhos. Ele pode ser usado com os atributos class, lang e title para marcar semânticas comuns a um grupo de elementos consecutivos.
