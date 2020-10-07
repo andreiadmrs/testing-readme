@@ -7,4 +7,4 @@
 
 ## Atributos
 
-open (boleano)
+- `open (boleano)` - Especifica que o elemento de diálogo está ativo e que o usuário pode interagir com ele
