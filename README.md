@@ -1,10 +1,7 @@
 # Formulário P3 (password, checkbox, radio)
 
 - `maxlength` - Limita o número máximo de caractéres.
-- `size` - # Formulário P3 (password, checkbox, radio)
-
-- `maxlength` - Limita o número máximo de caractéres.
 - `size` - Tamanho do campo.
 - `checked` - valor booleano que já marca automaticamente uma opção.
 
-**Observação:** Para que os multiplos radios trabalhem em conjunto, tem que dar o mesmo name parlos radios trabalhem em conjunto, tem que dar o mesmo name par
+**Observação:** Para que os multiplos radios trabalhem em conjunto, tem que dar o mesmo name par
