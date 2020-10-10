@@ -1,6 +1,5 @@
 # Formulário P3 (password, checkbox, radio)
-
-- `maxlength` - Limita o número máximo de # Formulário P3 (password, checkbox, radio)
+# Formulário P3 (password, checkbox, radio)
 
 - `maxlength` - Limita o número máximo de caractéres.
 - `size` - Tamanho do campo.
