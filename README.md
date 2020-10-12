@@ -6,17 +6,7 @@ descritas a seguir.
 - [X] **`datetime-local`** – Campo para entrada de data e hora
 
 ```
-<form>
-  <label>Data de Nascimento</label>
-  <input type="datetime-local" name="dtNascimento">
-</form>
-```
-
-- [X] **`month`** – Campo para entrada de mês e ano
-
-```
-<form>
-  <label>Mês e ano</label>
+<form
   <input type="month" name="mes">
 </form>
 ```
