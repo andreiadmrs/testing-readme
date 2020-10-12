@@ -1,11 +1,7 @@
                                                                   | Exemplo
 ---------------|------------------------------------------------------------------------------|---------------------------------------
 name           | Nome do campo                                                                | name=“dataHora”
-disabled       | Desabilita o campo não podendo ser editado                                   | disabled=“disabled” ou disabled
-form           | Permite especificar a qual formulário o elemento pertence através do ID      | form=“id do formulário pai”
-autocomplete   | Permite que o campo seja auto completado ou não                              | autocomplete=“on” ou “off”
-autofocos      | Posicione o cursor no elemento automaticamente ao abrir a página             | autofocos=“autofocus” ou autofocus
-maxlength      | Número máximo de elementos que podem ser inseridos no campo                  | maxlength=“50”
+disabled       | Desabiliem ser inseridos no campo                  | maxlength=“50”
 pattern        | Especifica uma expressão para validação do campo                             | pattern=“\d{5}”
 readonly       | Especifica que o campo é “somente leitura”, não permite editar o conteúdo    | readonly=“readonly” ou readonly
 required       | Especifica que o campo é requerido, tornando-o obrigatório                   | required=“required” ou required
