@@ -1,9 +1,29 @@
- **`datetime-local`** – Campo para entrada de data e hora
+# Formulário P4 (date, time, datetime-local)
 
+Datas e Horas - Campo pré configurado para entrada de valores como datas e horas, possui algumas variações 
+descritas a seguir.
+
+- [X] **`datetime-local`** – Campo para entrada de data e hora
+
+```
+<form>
+  <label>Data de Nascimento</label>
+  <input type="datetime-local" name="dtNascimento">
+</form>
 ```
 
 - [X] **`date`** – Campo para entrada de data
 
+```
+<form>
+  <label>Data</label>
+  <input type="date" name="data">
+</form>
+```
+
+- [X] **`month`** – Campo para entrada de mês e ano
+
+```
 <form>
   <label>Mês e ano</label>
   <input type="month" name="mes">
