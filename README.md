@@ -1,9 +1,4 @@
-
-
-```
-<form>
-  <label>Datas e Horas</label>
-Propiedade     | Descrição                                                                    | Exemplo
+                                                                  | Exemplo
 ---------------|------------------------------------------------------------------------------|---------------------------------------
 name           | Nome do campo                                                                | name=“dataHora”
 disabled       | Desabilita o campo não podendo ser editado                                   | disabled=“disabled” ou disabled
