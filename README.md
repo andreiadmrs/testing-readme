@@ -9,18 +9,7 @@ descritas a seguir.
 <form
   <input type="month" name="mes">
 </form>
-```
-
-- [X] **`week`** – Campo para entrada de dia da semana, dia do mês e ano
-
-```
-<form>
-  <label>Semana, dia e ano</label>
-  <input type="week" name="semana">
-</form>
-```
-
-- [X] **`time`** – Campo para entrada de hora
+`` de hora
 
 ```
 <form>
