@@ -1,12 +1,4 @@
 
-```
-<form>
-  <label>Hora</label>
-  <input type="time" name="hora">
-</form>
-```
-
-- [X] **`datetime`** – Campo para entrada de datas e horas gerais, não possui pré formatação
 
 ```
 <form>
