@@ -1,11 +1,6 @@
  **`datetime-local`** – Campo para entrada de data e hora
 
 ```
-<form>
-  <label>Data de Nascimento</label>
-  <input type="datetime-local" name="dtNascimento">
-</form>
-```
 
 - [X] **`date`** – Campo para entrada de data
 
