@@ -4,10 +4,6 @@
 
 - [X] **`date`** – Campo para entrada de data
 
-
-- [X] **`month`** – Campo para entrada de mês e ano
-
-```
 <form>
   <label>Mês e ano</label>
   <input type="month" name="mes">
