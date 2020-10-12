@@ -12,15 +12,6 @@ descritas a seguir.
 </form>
 ```
 
-- [X] **`date`** – Campo para entrada de data
-
-```
-<form>
-  <label>Data</label>
-  <input type="date" name="data">
-</form>
-```
-
 - [X] **`month`** – Campo para entrada de mês e ano
 
 ```
