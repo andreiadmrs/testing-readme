@@ -11,12 +11,6 @@
 ```
 <form>
   <label>Datas e Horas</label>
-  <input type="datetime" name="datahora">
-</form>
-```
-
-## Propriedades para os campos datetime
-
 Propiedade     | Descrição                                                                    | Exemplo
 ---------------|------------------------------------------------------------------------------|---------------------------------------
 name           | Nome do campo                                                                | name=“dataHora”
