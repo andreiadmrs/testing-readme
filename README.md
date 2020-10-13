@@ -17,10 +17,7 @@ descritas a seguir.
 ```
 <form>
   <label>Data</label>
-  <input type="date" name="data">
-</form>
-```
-
+  <input type="date" name="dat
 - [X] **`month`** – Campo para entrada de mês e ano
 
 ```
