@@ -1,18 +1,1 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste</title>
-
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="colors.js"></script>
-
-</head>
-<body>
-
-  <div id="container"></div>
-
-  <script src="index.js"></script>
-</body>
-</html>
+<img alt="Andreia's Github Stats" src="https://github-readme-stats.vercel.app/api?username=andreiadmrs&show_icons=true&hide_border=false&count_private=true"/>
